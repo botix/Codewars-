@@ -1,3 +1,5 @@
+//3 kyu
+
 function validateBattlefield(field) {
     // write your magic here
 

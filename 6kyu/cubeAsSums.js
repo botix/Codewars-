@@ -1,3 +1,8 @@
+// https://www.codewars.com/kata/58af1bb7ac7e31b192000020
+// Can you compute a cube as a sum?
+
+// In this Kata, you will be given a number n (where n >= 1) and your task is to find n consecutive odd numbers whose sum is exactly the cube of 
+
 function findSummands(n){
     //replace with your solution ...
     if(n < 1) return 

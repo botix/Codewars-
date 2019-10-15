@@ -1,4 +1,5 @@
 // n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
+//https://www.codewars.com/kata/56a5d994ac971f1ac500003e
 
 function longestConsec(strarr, k) {
     // your code

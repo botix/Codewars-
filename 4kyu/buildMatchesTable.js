@@ -1,3 +1,5 @@
+//round robin tournament simulator, everyone plays with everyone
+
 function buildMatchesTable(numberOfTeams) {
     
     let round = 0;

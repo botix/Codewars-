@@ -1,3 +1,6 @@
+//4kyu
+/*Write a function that accepts a square matrix (N x N 2D array) and returns the determinant of the matrix.*/
+
 function calculateDeterminantN2(matrix){
     return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
 }    
@@ -28,7 +31,7 @@ function determinant(m) {
     if(invertedMatrix.length > 3) invertedMatrix.shift()
 
     if(invertedMatrix[0].length === 2) {
-                //šalji na izračun    
+                
     }
   
 

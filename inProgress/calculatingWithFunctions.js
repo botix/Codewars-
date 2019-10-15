@@ -1,3 +1,5 @@
+//https://www.codewars.com/kata/calculating-with-functions
+
 function zero() {}
 function one() {}
 function two() {}
@@ -11,7 +13,7 @@ function nine() {}
 
 function plus() {}
 function minus() {}
-function times(func) {return func * }
+function times() {}
 function dividedBy() {}
 
 
