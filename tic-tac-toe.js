@@ -1,0 +1,82 @@
+function isSolved(board) {
+    // TODO: Check if the board is solved!
+    const columns =[[],[],[]]
+    const diagonals = [[],[]]
+    const rows = board
+    for(let i=0; i < board.length; i++){
+        for(let j=0; j< board.length; j++){
+            
+            columns[j].push(board[i][j])
+            
+            if(i === j){
+                diagonals[0].push(board[i][j])
+            }
+
+            if( (i===1 && j ===1) || (i===2 && j ===0) || (i===0 && j ===2)  ){
+                diagonals[1].push(board[i][j])
+            }
+        }     
+    }
+
+
+    function deduce(arr){
+
+        const isWon = arr.reduce((a, b) => a +""+ b)
+        if(isWon === "222") return 2
+        if(isWon === "111") return 1
+        
+        const isStillOn = arr.some(field =>{
+           return  field === 0
+        })
+        if(isStillOn === true){ 
+            return -1
+        }else{
+            return 0
+        }
+    }
+
+
+    const evalArr = []
+    rows.forEach(row =>{
+        evalArr.push(row)
+    })
+    columns.forEach(column =>{
+        evalArr.push(column)
+    })
+    diagonals.forEach(diagonal =>{
+        evalArr.push(diagonal)
+    })
+
+
+    const winner = evalArr.map(row =>{
+        return deduce(row)
+        
+    })
+   
+    let result = 0;
+    if(winner.some(val => val === -1)) result = -1
+
+    winner.forEach(value =>{
+
+        if(value === 1) result =  1;
+        if(value === 2) result =  2;
+        
+    })
+
+    
+
+    return result
+}
+
+const isIt = isSolved([
+    [1,2,0],[0,1,2],[0,0,1]
+])
+
+console.log(isIt)
+
+
+//     -1 if the board is not yet finished (there are empty spots),
+// 1 if "X" won,
+// 2 if "O" won,
+
+// 0 if it's a cat's game (i.e. a draw).
