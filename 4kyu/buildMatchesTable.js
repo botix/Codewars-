@@ -18,7 +18,6 @@ function buildMatchesTable(numberOfTeams) {
     {   
         minorTable.push(i+1); 
     }    
-    memory = minorTable[1]
 
     for(let i = 0; i < numberOfTeams-1; i++)
     {
@@ -26,7 +25,8 @@ function buildMatchesTable(numberOfTeams) {
         const moveToLastPostion = minorTable.splice(minorTable.length-1, 1)
         minorTable.splice(1, 0, moveToLastPostion[0])
 
-        for(let j =0; j < half; j++){
+        for(let j =0; j < half; j++)
+        {
         roundTable.push([minorTable[j], minorTable[minorTable.length-j-1]]) 
         }
 
